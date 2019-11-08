@@ -107,6 +107,7 @@ bool parser()
 
 Produccion T(token A,token f)
 {
+	////////////CONTROLADOR////////////
 	if(A==_MAIN && (f==_resta || f==_not || f==_parIzq || f==_num || f==_id || f==_true || f==_false)) return producciones[1];
 	else if(A==_QUEST && (f==_resta || f==_not || f==_parIzq || f==_num || f==_id || f==_true || f==_false)) return producciones[2];
 	else if(A==_QUESTP && (f==_interrogacion)) return producciones[3];

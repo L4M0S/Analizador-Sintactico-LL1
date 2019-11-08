@@ -406,61 +406,61 @@ token next()
 	
 	switch(comentario())
 	{
-		case _comentario: return _comentario; 
+		case _comentario: //return _comentario; 
 			break;
 	}
 	
 	switch(identificador())
 	{
-		case _or:  cout<<cadena<<" "; return _or;
+		case _or:   return _or;
 			break;
-		case _and:  cout<<cadena<<" ";return _and;
+		case _and:  return _and;
 			break;
-		case _not:  cout<<cadena<<" ";return _not;
+		case _not:  return _not;
 			break;
-		case _true:  cout<<cadena<<" ";return _true;
+		case _true:  return _true;
 			break;
-		case _false:  cout<<cadena<<" ";return _false;
+		case _false:  return _false;
 			break;
-		case _id: cout<<cadena<<" "; return _id; 
+		case _id:  return _id; 
 			break;
 	}
 	switch(numero())
 	{
-		case _num: cout<<cadena<<" "; return _num; 
+		case _num:  return _num; 
 			break;
 	}
 	
 	switch(especiales())
 	{
-		case _parDer: cout<<cadena<<" ";return _parDer; 
+		case _parDer: return _parDer; 
 	 		break;
-		case _parIzq: cout<<cadena<<" ";return _parIzq; 
+		case _parIzq: return _parIzq; 
 	 		break;
-		case _menor: cout<<cadena<<" ";return _menor; 
+		case _menor: return _menor; 
 	 		break;
-		case _mayor: cout<<cadena<<" ";return _mayor; 
+		case _mayor: return _mayor; 
 	 		break;	
-		case _suma: cout<<cadena<<" ";return _suma; 
+		case _suma: return _suma; 
 	        break;
-		case _resta: cout<<cadena<<" ";return _resta; 
+		case _resta: return _resta; 
 	        break;
-		case _multi: cout<<cadena<<" ";return _multi; 
+		case _multi: return _multi; 
 	        break;
-		case _divi: cout<<cadena<<" ";return _divi; 
+		case _divi: return _divi; 
 	        break;
-		case _igual: cout<<cadena<<" ";return _igual; 
+		case _igual: return _igual; 
 	    	break;
-		case _diferente: cout<<cadena<<" ";return _diferente; 
+		case _diferente: return _diferente; 
 	    	break;
-        case _dosPuntos: cout<<cadena<<" ";return _dosPuntos; 
+        case _dosPuntos: return _dosPuntos; 
 	 		break;	
-		case _interrogacion: cout<<cadena<<" ";return _interrogacion; 
+		case _interrogacion: return _interrogacion; 
 	 		break;	 
 	}
 	
-	if(eof()){cout<<"eof ";return _eof;}
+	if(eof()){return _eof;}
 	
-	cout<<"error ";
+	//cout<<"error ";
 	return _error;
 }

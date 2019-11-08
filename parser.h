@@ -5,11 +5,6 @@
 
 #include<vector>
 
-/*
-bool openp(char*);
-void closep();
-bool parser(char*);
-*/
 typedef vector<token> Produccion;
 
 bool parser();
